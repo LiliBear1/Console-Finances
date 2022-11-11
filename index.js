@@ -95,8 +95,17 @@ var finances = [
 console.log("Financial Analysis\n------------------------\nTotal months: "+finances.length);
 // 86 months
 
+numMonths = finances.length;
+
 // * The net total amount of Profit/Losses over the entire period.
 // Dates are at position 0 and amount is at position 1
+
+for (var i = 0; i < numMonths; i++) {
+    var currentMonth = finances[i];
+}
+
+currentProfit = currentMonth[1];
+console.log("Total: $" + currentProfit);
 
 
 
