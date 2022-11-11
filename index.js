@@ -92,9 +92,11 @@ var finances = [
 // Calculate each of the following:
 // * The total number of months included in the dataset.
 
-
+console.log("Financial Analysis\n------------------------\nTotal months: "+finances.length);
+// 86 months
 
 // * The net total amount of Profit/Losses over the entire period.
+// Dates are at position 0 and amount is at position 1
 
 
 
