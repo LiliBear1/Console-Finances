@@ -92,24 +92,54 @@ var finances = [
 // Calculate each of the following:
 // * The total number of months included in the dataset.
 
-console.log("Financial Analysis\n------------------------\nTotal months: "+finances.length);
-// 86 months
-
 numMonths = finances.length;
 
+// Creating a var for efficiency
+
+console.log("Financial Analysis\n------------------------\nTotal months: " + numMonths);
+// expecting to see 86 months
+
+
 // * The net total amount of Profit/Losses over the entire period.
-// Dates are at position 0 and amount is at position 1
+// Dates are at position 0 and amount is at position 1, expecting to 38,382,578 
+
+// for (var i = 0; i < numMonths; i++) {
+//     var currentMonth = finances[i];
+// }
+
+// currentProfit = currentMonth[1];
+// console.log("Total: $" + currentProfit);
+
+// Removed the above as it wasn't giving me the answer I expected
+
+// used medium.com / poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+
+
+var profitArray = finances.map((currentMonth) => currentMonth[1]);
+
+// console.log(profitArray);
+
+var sum = 0;
 
 for (var i = 0; i < numMonths; i++) {
-    var currentMonth = finances[i];
+    sum += profitArray[i]
 }
 
-currentProfit = currentMonth[1];
-console.log("Total: $" + currentProfit);
+console.log("Total: $" + sum);
+
+
+// var profitMonths = finances.filter((currentMonth) => currentMonth[1] > 0);
+// var totalProfitMonths = profitMonths
+//   .map((profitMonths) => profitMonths[1])
+//   .reduce((accVal, curVal) => accVal + curVal, 0);
+
+//   console.log("Total: $" + totalProfitMonths);
 
 
 
 // * The average of the **changes** in Profit/Losses over the entire period.
+// I want to sum changes and divide by numMonths to calc average change of money each month
+
 
 
 
