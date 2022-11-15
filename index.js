@@ -101,6 +101,7 @@ numMonths = finances.length;
 console.log("Financial Analysis\n------------------------\nTotal months: " + numMonths);
 
 
+
 // REQ 2 The net total amount of Profit/Losses over the entire period.
 // Dates are at position 0 and amount is at position 1, expecting to see 38,382,578 
 
@@ -125,29 +126,55 @@ for (var i = 0; i < numMonths; i++) {
 console.log("Total: $" + sum);
 
 
+
 // REQ 3 The average of the **changes** in Profit/Losses over the entire period.
+// You will need to track what the total change in profits are from month to month and then find the average.
+//   * (`Total/Number of months`)
 // I want to sum changes and divide by numMonths to calc average change of money each month
-// get the average of all total and losses
 
 var avgProfitLoss =
   profitArray.reduce((accVal, curVal) => accVal + curVal, 0) / numMonths; 
 
-console.log(avgProfitLoss);
+console.log("Average Change $ " + avgProfitLoss);
+
+// I dont think this is right as it asks for the average of **changes** so I am expecting to see  -2288.1976744186, will come back to it
 
 
 
-//   * You will need to track what the total change in profits are from month to month and then find the average.
-//   * (`Total/Number of months`)
+// REQ 4 The greatest increase in profits (date and amount) over the entire period.
+// I am expectng to see Feb 2012 1926159
+// REQ 5 The greatest decrease in losses (date and amount) over the entire period.
+// I don't entirely understand the wording (NB: the README reqs says "greatest decrease in losses" but at the bottom, the example says "Greatest Decrease in Profits") so confusion aside, I think I am expecting to see Sep 2013 -2196167
+
+var maxMonth = {
+    monthName: '',
+    profit: 0,
+  };
+  
+var minMonth = {
+    monthName: '',
+    profit: 0,
+  };
+
+  finances.forEach((month) => {
+    if (month[1] > maxMonth.profit) {
+      maxMonth.monthName = month[0];
+      maxMonth.profit = month[1];
+    }
+
+    if (month[1] < minMonth.profit) {
+      minMonth.monthName = month[0];
+      minMonth.profit = month[1];
+    }
+
+    return { maxMonth, minMonth };
+  });
+  
+  console.log("Greatest Increase in Profits: ", maxMonth);
+  console.log("Greatest Decrease in Profits: ", minMonth);
 
 
-
-// * The greatest increase in profits (date and amount) over the entire period.
-
-
-
-// * The greatest decrease in losses (date and amount) over the entire period.
-
-
+// EXPECTED LAYOUT 
 // When you open your code in the browser your resulting analysis should look similar to the following:
 
 //   ```text
