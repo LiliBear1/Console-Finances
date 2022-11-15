@@ -16,8 +16,8 @@ We have learnt the fundamentals of JavaScript and are now applying this plus add
 
 # Deployed Page
 
-* [Deployed Page Link](..)
-* [Deployed Git Page Link](..) 
+* [Deployed Page Link](https://lilibear1.github.io/Console-Finances/)
+* [Git Page Link](https://github.com/LiliBear1/Console-Finances) 
 
 ## Process
 
