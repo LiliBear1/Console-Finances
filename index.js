@@ -173,6 +173,8 @@ var minMonth = {
   console.log("Greatest Increase in Profits: ", maxMonth);
   console.log("Greatest Decrease in Profits: ", minMonth);
 
+// Again, got the months as expected, but the profit change hasn't been calculated right
+
 
 // EXPECTED LAYOUT 
 // When you open your code in the browser your resulting analysis should look similar to the following:
