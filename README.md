@@ -16,8 +16,8 @@ We have learnt the fundamentals of JavaScript and are now applying this plus add
 
 # Deployed Page
 
-[Deployed Page Link](..)
-[Deployed Git Page Link](..) 
+* [Deployed Page Link](..)
+* [Deployed Git Page Link](..) 
 
 ## Process
 
@@ -39,12 +39,12 @@ We have learnt the fundamentals of JavaScript and are now applying this plus add
 
 ## Additional notes
 
-* I am aware I didn't quite get the answer of changes in P&L right (REQ 3) which impacted the results for max and min month (REQ 4 & 5), I couldn't work this one out so will ask the class / TAs about this. 
+I am aware I didn't quite get the answer of changes in P&L right (REQ 3) which impacted the results for max and min month (REQ 4 & 5), I couldn't work this one out so will ask the class / TAs about this. 
 
 Either way, I think the right methodology was used in getting the profit array and calculating a general average otherwise.
 
 ## Credits 
-* 2022 Trilogy Education Services, LLC
+2022 Trilogy Education Services, LLC
 
 ## License
 
